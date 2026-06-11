@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wish Wonderland</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div class="cursor-glow"></div>
+  <div class="floating-orbs">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <main class="page-shell">
+    <section class="hero glass-panel" id="home">
+      <div class="hero-copy" data-depth="0.08">
+        <p class="eyebrow">A Birthday Surprise Crafted With Love</p>
+        <h1>Happy Birthday To The Sweetest Soul In My Life</h1>
+        <p class="hero-text">
+          A dreamy birthday celebration filled with heartfelt wishes, magical moments, glowing memories, and sweet surprises made specially for her.
+        </p>
+
+        <div class="cta-row">
+          <button class="primary-btn" id="startJourney" type="button">Click Me</button>
+          <a class="secondary-btn hidden" id="jumpGallery" href="#gallery">See Final Memory Gallery</a>
+        </div>
+
+        <div class="wish-progress" aria-label="Birthday wish journey progress">
+          <span class="progress-dot active"></span>
+          <span class="progress-dot"></span>
+          <span class="progress-dot"></span>
+          <span class="progress-dot"></span>
+          <span class="progress-dot"></span>
+          <span class="progress-dot"></span>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-depth="0.16">
+        <div class="birthday-sculpture">
+          <div class="cake">
+            <span class="flame"></span>
+            <span class="candle"></span>
+            <span class="layer top"></span>
+            <span class="layer middle"></span>
+            <span class="layer base"></span>
+          </div>
+          <div class="balloon balloon-one"></div>
+          <div class="balloon balloon-two"></div>
+          <div class="balloon balloon-three"></div>
+          <div class="ring ring-one"></div>
+          <div class="ring ring-two"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-strip glass-panel">
+      <div class="strip-card" data-depth="0.04">
+        <h2>Six birthday surprises</h2>
+        <p>Each click opens a new loving wish, a fresh celebration visual, and another special moment made just for her birthday.</p>
+      </div>
+      <div class="strip-card" data-depth="0.09">
+        <h2>Celebration motion</h2>
+        <p>Mouse movement, glow effects, floating birthday shapes, and a cinematic celebration background make the surprise feel alive.</p>
+      </div>
+      <div class="strip-card" data-depth="0.13">
+        <h2>Final birthday gallery</h2>
+        <p>After the sixth wish, a memorable gallery of ten celebration cards appears with 3D hover interaction and dreamy lighting.</p>
+      </div>
+    </section>
+
+    <section class="gallery-section hidden" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Final Birthday Surprise</p>
+        <h2>Top 10 Celebration Gallery</h2>
+        <p>A glowing wall of birthday wishes, celebration moods, and unforgettable moments to make her feel deeply special.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="memory-card">
+          <img data-memory-image="0" src="" alt="Birthday table setup with balloons">
+          <div class="memory-copy"><h3>Golden Birthday Glow</h3><p>Warm lights, cake sparkle, and soft happiness everywhere.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="1" src="" alt="Birthday cake with candles">
+          <div class="memory-copy"><h3>Candle Wish Moment</h3><p>The magical second before a heartfelt birthday wish comes true.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="2" src="" alt="Pink birthday decorations">
+          <div class="memory-copy"><h3>Dreamy Birthday Vibes</h3><p>Soft colors and sweet feelings for a truly beautiful heart.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="3" src="" alt="Sparkler celebration moment">
+          <div class="memory-copy"><h3>Sparkler Magic</h3><p>A shower of little stars to celebrate her special day.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="4" src="" alt="Friends celebrating birthday">
+          <div class="memory-copy"><h3>Pure Birthday Laughter</h3><p>The kind of laughter that makes birthdays unforgettable.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="5" src="" alt="Pink balloon arrangement">
+          <div class="memory-copy"><h3>Balloon Bloom</h3><p>Floating joy, sweet colors, and celebration in every direction.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="6" src="" alt="Night lights and celebration">
+          <div class="memory-copy"><h3>Night Of Wishes</h3><p>Birthday dreams glowing brighter than the evening sky.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="7" src="" alt="Decorative flowers with gift">
+          <div class="memory-copy"><h3>Wrapped With Love</h3><p>Every gift, flower, and detail filled with affection.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="8" src="" alt="Romantic lights and flowers">
+          <div class="memory-copy"><h3>Birthday Glow</h3><p>Gentle beauty and warm light for her once-a-year magic.</p></div>
+        </article>
+        <article class="memory-card">
+          <img data-memory-image="9" src="" alt="Confetti and birthday scene">
+          <div class="memory-copy"><h3>Confetti Finale</h3><p>A final birthday memory wall made to stay in her heart.</p></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="wish-modal hidden" id="wishModal" aria-hidden="true">
+    <div class="modal-backdrop" id="closeModal"></div>
+    <div class="modal-card glass-panel">
+      <button class="icon-close" id="dismissModal" aria-label="Close message">&times;</button>
+      <div class="modal-media-wrap">
+        <img id="modalImage" src="" alt="Birthday memory">
+      </div>
+      <div class="modal-copy">
+        <p class="eyebrow" id="modalStepLabel">Birthday Wish 1</p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"></p>
+        <button class="primary-btn" id="nextWish" type="button">Next Surprise</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
