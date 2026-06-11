@@ -108,7 +108,7 @@ let jumpGalleryBtn;
 let progressDots = [];
 
 function startJourney() {
-  alert("Click Me button was clicked!");
+  // alert("Click Me button was clicked!");
   currentWish = 0;
   showWish(currentWish);
 }
