@@ -197,7 +197,8 @@ function mountOfflineGalleryArt() {
     "images/IMG-20251022-WA0019.jpg",
     "images/IMG-20251022-WA0046.jpg",
     "images/IMG-20251124-WA0023.jpg",
-    "images/IMG-20251201-WA0061.jpg"
+    "images/IMG-20251201-WA0061.jpg",
+    "images/Photoroom-20250109_223908.png"
   ];
 
   document.querySelectorAll("[data-memory-image]").forEach((img, index) => {
