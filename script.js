@@ -59,7 +59,7 @@ const wishes = [
     label: "Birthday Wish 1",
     title: "Today Is Your Beautiful Day",
     text: "Happy Birthday to the most precious girl. May your day begin with smiles, glow with love, and end with the sweetest memories your heart can hold.",
-    image: "./images/371081569da89f964057614f97755dbf.jpg"
+    image: "images/371081569da89f964057614f97755dbf.jpg"
   },
   {
     label: "Birthday Wish 2",
