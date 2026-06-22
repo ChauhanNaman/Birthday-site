@@ -65,31 +65,31 @@ const wishes = [
     label: "Birthday Wish 2",
     title: "May Happiness Stay With You",
     text: "I wish this birthday brings you laughter that feels endless, moments that feel magical, and happiness that stays with you far beyond today.",
-    image: createWishArt("Happiness Stays", "Soft joy, bright laughter, and birthday warmth all around.", gradientThemes[1])
+    image: "images/IMG-20241217-WA0039.jpg"
   },
   {
     label: "Birthday Wish 3",
     title: "You Deserve The Best Year",
     text: "May every new month bring success, peace, sweetness, and moments so lovely that you look back on this year with a full and grateful heart.",
-    image: createWishArt("Best Year Ahead", "New dreams, bright paths, and beautiful memories ahead.", gradientThemes[2])
+    image: "images/IMG-20250207-WA0003.jpg"
   },
   {
     label: "Birthday Wish 4",
     title: "You Make Life More Beautiful",
     text: "Your presence brings warmth, comfort, and brightness to the people around you. Never forget how deeply special, loved, and unforgettable you are.",
-    image: createWishArt("Life Feels Brighter", "Your presence makes every celebration more beautiful.", gradientThemes[3])
+    image: "images/IMG-20250305-WA0017.jpg"
   },
   {
     label: "Birthday Wish 5",
     title: "A Wish For All Your Dreams",
     text: "May your dreams grow bigger, your heart grow lighter, and your future bloom with beautiful surprises, unforgettable celebrations, and proud moments.",
-    image: createWishArt("All Your Dreams", "Golden dreams, shining hopes, and lovely surprises.", gradientThemes[4])
+    image: "images/IMG-20250314-WA0252.jpg"
   },
   {
     label: "Birthday Wish 6",
     title: "This Surprise Ends With Love",
     text: "Happy Birthday, beautiful. May love always find you, peace always stay with you, and every wish made today turn into something wonderful in your life.",
-    image: createWishArt("A Heart Full Of Love", "A final birthday wish to stay in your heart forever.", gradientThemes[5])
+    image: "images/IMG-20250417-WA0004.jpg"
   }
 ];
 let currentWish = 0;
@@ -188,12 +188,17 @@ function bindCardTilt() {
 }
 
 function mountOfflineGalleryArt() {
+  const galleryImages = [
+    "images/371081569da89f964057614f97755dbf.jpg",
+    "images/IMG-20241217-WA0039.jpg",
+    "images/IMG-20250207-WA0003.jpg",
+    "images/IMG-20250305-WA0017.jpg",
+    "images/IMG-20250314-WA0252.jpg",
+    "images/IMG-20250417-WA0004.jpg"
+  ];
+
   document.querySelectorAll("[data-memory-image]").forEach((img, index) => {
-    img.src = createWishArt(
-      `Birthday Memory ${index + 1}`,
-      "A glowing celebration card you can later replace with a real photo.",
-      gradientThemes[index % gradientThemes.length]
-    );
+    img.src = galleryImages[index] || galleryImages[0];
   });
 }
 
