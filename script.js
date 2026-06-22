@@ -189,12 +189,15 @@ function bindCardTilt() {
 
 function mountOfflineGalleryArt() {
   const galleryImages = [
-    "images/371081569da89f964057614f97755dbf.jpg",
-    "images/IMG-20241217-WA0039.jpg",
-    "images/IMG-20250207-WA0003.jpg",
-    "images/IMG-20250305-WA0017.jpg",
-    "images/IMG-20250314-WA0252.jpg",
-    "images/IMG-20250417-WA0004.jpg"
+    "images/11.jpg",
+    "images/IMG-20241215-WA0030.jpg",
+    "images/IMG-20250625-WA0006.jpg",
+    "images/IMG-20250919-WA0001.jpg",
+    "images/IMG-20250922-WA0005.jpg",
+    "images/IMG-20251022-WA0019.jpg",
+    "images/IMG-20251022-WA0046.jpg",
+    "images/IMG-20251124-WA0023.jpg",
+    "images/IMG-20251201-WA0061.jpg"
   ];
 
   document.querySelectorAll("[data-memory-image]").forEach((img, index) => {
